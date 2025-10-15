@@ -30,9 +30,9 @@ from launch_ros.parameter_descriptions import ParameterFile
 def launch_setup(context, *args, **kwargs):
     # concatenate node parameters
     concatenate_and_time_sync_node_param = ParameterFile(
-        param_file=LaunchConfiguration("concatenate_and_time_sync_node_param_path").perform(
-            context
-        ),
+        param_file=LaunchConfiguration(
+            "concatenate_and_time_sync_node_param_path"
+        ).perform(context),
         allow_substs=True,
     )
 
@@ -42,12 +42,17 @@ def launch_setup(context, *args, **kwargs):
         plugin="autoware::pointcloud_preprocessor::PointCloudConcatenateDataSynchronizerComponent",
         name="concatenate_data",
         remappings=[
-            ("~/input/twist", "/sensing/vehicle_velocity_converter/twist_with_covariance"),
+            (
+                "~/input/twist",
+                "/sensing/vehicle_velocity_converter/twist_with_covariance",
+            ),
             ("output", "concatenated/pointcloud"),
             ("output_info", "concatenated/pointcloud_info"),
         ],
         parameters=[concatenate_and_time_sync_node_param],
-        extra_arguments=[{"use_intra_process_comms": LaunchConfiguration("use_intra_process")}],
+        extra_arguments=[
+            {"use_intra_process_comms": LaunchConfiguration("use_intra_process")}
+        ],
     )
 
     # load concat or passthrough filter
@@ -64,9 +69,13 @@ def generate_launch_description():
     launch_arguments = []
 
     def add_launch_arg(name: str, default_value=None):
-        launch_arguments.append(DeclareLaunchArgument(name, default_value=default_value))
+        launch_arguments.append(
+            DeclareLaunchArgument(name, default_value=default_value)
+        )
 
-    sample_sensor_kit_launch_share_dir = get_package_share_directory("sample_sensor_kit_launch")
+    ysh_sensor_kit_launch_share_dir = get_package_share_directory(
+        "ysh_sensor_kit_launch"
+    )
 
     add_launch_arg("base_frame", "base_link")
     add_launch_arg("use_multithread", "False")
@@ -75,7 +84,7 @@ def generate_launch_description():
     add_launch_arg(
         "concatenate_and_time_sync_node_param_path",
         os.path.join(
-            sample_sensor_kit_launch_share_dir,
+            ysh_sensor_kit_launch_share_dir,
             "config",
             "concatenate_and_time_sync_node.param.yaml",
         ),

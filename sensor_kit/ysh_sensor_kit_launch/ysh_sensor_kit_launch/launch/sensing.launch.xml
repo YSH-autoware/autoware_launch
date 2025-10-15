@@ -7,24 +7,24 @@
   <group>
   <!-- 10.15_YSH_simulator_lidar_deactivated -->
     <!-- LiDAR Driver -->
-    <!-- <include file="$(find-pkg-share sample_sensor_kit_launch)/launch/lidar.launch.xml">
+    <!-- <include file="$(find-pkg-share ysh_sensor_kit_launch)/launch/lidar.launch.xml">
       <arg name="launch_driver" value="$(var launch_driver)"/>
       <arg name="vehicle_mirror_param_file" value="$(var vehicle_mirror_param_file)"/>
       <arg name="pointcloud_container_name" value="$(var pointcloud_container_name)"/>
     </include> -->
-  <!-- 10.15_YSH_simulator_camear_deactivated -->
+  <!-- 10.15_YSH_simulator_camera_deactivated -->
     <!-- Camera Driver -->
-    <!-- <include file="$(find-pkg-share sample_sensor_kit_launch)/launch/camera.launch.xml">
+    <!-- <include file="$(find-pkg-share ysh_sensor_kit_launch)/launch/camera.launch.xml">
       <arg name="launch_driver" value="$(var launch_driver)" />
     </include> -->
   <!-- 10.15_YSH_simulator_imu_deactivated -->
     <!-- IMU Driver -->
-    <!-- <include file="$(find-pkg-share sample_sensor_kit_launch)/launch/imu.launch.xml">
+    <include file="$(find-pkg-share ysh_sensor_kit_launch)/launch/imu.launch.xml">
       <arg name="launch_driver" value="$(var launch_driver)"/>
-    </include> -->
+    </include>
   <!-- 10.15_YSH_simulator_gnss_deactivated -->
     <!-- GNSS Driver -->
-    <!-- <include file="$(find-pkg-share sample_sensor_kit_launch)/launch/gnss.launch.xml">
+    <!-- <include file="$(find-pkg-share ysh_sensor_kit_launch)/launch/gnss.launch.xml">
       <arg name="launch_driver" value="$(var launch_driver)"/>
     </include> -->
 

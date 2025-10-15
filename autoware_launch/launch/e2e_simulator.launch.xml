@@ -7,7 +7,7 @@
   <!-- 10.15_YSH_simulator_vehilcle_changed -->
   <!-- <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/> -->
   <arg name="vehicle_model" default="ysh_vehicle" description="vehicle model name"/>
-  <!-- 10.15_YSH_simulator_sensor_changed --> 
+  <!-- 10.15_YSH_simulator_sensor_changed -->
   <!-- <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/> -->
   <arg name="sensor_model" default="ysh_sensor_kit" description="sensor model name"/>
   <arg name="data_path" default="$(env HOME)/Humble/Autoware/autoware_data" description="packages data and artifacts directory path"/>
