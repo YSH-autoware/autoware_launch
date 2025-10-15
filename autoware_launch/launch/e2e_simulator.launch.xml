@@ -4,12 +4,13 @@
   <arg name="use_sim_time" default="true" description="use simulation time"/>
   <!-- 10.15_YSH_map_path_defulat add -->
   <arg name="map_path" default="/home/Humble/Humble/Autoware/Autoware_Map/Carla/Town05" description="point cloud and lanelet2 map directory path"/>
-  
+  <!-- 10.15_YSH_simulator_vehilcle_changed -->
   <!-- <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/> -->
-  <arg name="vehicle_model" default="sample_vehicle" description="vehicle model name"/>
+  <arg name="vehicle_model" default="ysh_vehicle" description="vehicle model name"/>
+  <!-- 10.15_YSH_simulator_sensor_changed --> 
   <!-- <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/> -->
-  <arg name="sensor_model" default="sample_sensor_kit" description="sensor model name"/>
-  <arg name="data_path" default="$(env HOME)/autoware_data" description="packages data and artifacts directory path"/>
+  <arg name="sensor_model" default="ysh_sensor_kit" description="sensor model name"/>
+  <arg name="data_path" default="$(env HOME)/Humble/Autoware/autoware_data" description="packages data and artifacts directory path"/>
   <!-- 10.15_YSH_simulator_changed -->
   <!-- <arg name="simulator_type" default="awsim" description="select the simulator type ('awsim' or 'carla')"/> -->
   <arg name="simulator_type" default="carla" description="select the simulator type ('awsim' or 'carla')"/>
