@@ -1,17 +1,25 @@
 /**:
   ros__parameters:
-    max_vel: 4.17           # max velocity limit [m/s]
+    # 10.17_YSH - Increased from 4.17 (15km/h) to 13.9 (50km/h) for CARLA
+    # 30 km/h: max_vel: 8.3
+    # 50 km/h: max_vel: 13.9
+    # 60 km/h: max_vel: 16.7
+    # 80 km/h: max_vel: 22.2
+    # 100 km/h: max_vel: 27.8
+    max_vel: 16.7 # max velocity limit [m/s] = 60 km/h
 
     # constraints param for normal driving
+    # 10.17_YSH - Increased acceleration for CARLA (1.0→2.0)
     normal:
-      min_acc: -1.0         # min deceleration [m/ss]
-      max_acc: 1.0          # max acceleration [m/ss]
-      min_jerk: -1.0        # min jerk [m/sss]
-      max_jerk: 1.0         # max jerk [m/sss]
+      min_acc: -2.0 # min deceleration [m/ss]
+      max_acc: 2.0 # max acceleration [m/ss]
+      min_jerk: -1.5 # min jerk [m/sss]
+      max_jerk: 1.5 # max jerk [m/sss]
 
     # constraints to be observed
+    # 10.17_YSH - Increased limits for CARLA (max_acc: 1.0→2.5)
     limit:
-      min_acc: -2.5         # min deceleration limit [m/ss]
-      max_acc: 1.0          # max acceleration limit [m/ss]
-      min_jerk: -1.5        # min jerk limit [m/sss]
-      max_jerk: 1.5         # max jerk limit [m/sss]
+      min_acc: -3.0 # min deceleration limit [m/ss]
+      max_acc: 2.5 # max acceleration limit [m/ss]
+      min_jerk: -2.0 # min jerk limit [m/sss]
+      max_jerk: 2.0 # max jerk limit [m/sss]

@@ -55,11 +55,13 @@ units:
   - path: /autoware/modes/comfortable_stop
     type: and
     list:
-      # 10.17_YSH_COMFORTABLE_STOP_DISABLED_FOR_CARLA
-      # Before: All diagnostic checks enabled
-      # After: Empty list = comfortable_stop never triggers
-      # Reason: CARLA environment causes false triggers that limit speed to ~7 m/s
-      [] # Empty list = comfortable_stop mode never activates
+      - { type: link, link: /autoware/map }
+      - { type: link, link: /autoware/localization }
+      - { type: link, link: /autoware/planning }
+      - { type: link, link: /autoware/perception }
+      - { type: link, link: /autoware/control }
+      - { type: link, link: /autoware/vehicle }
+      - { type: link, link: /autoware/system }
 
   - path: /autoware/modes/emergency_stop
     type: and
