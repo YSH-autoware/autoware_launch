@@ -194,7 +194,8 @@
     />
 
     <!-- imu -->
-    <xacro:imu_macro
+     <!-- 10.15_YSH_imu_topic_changed -->
+    <!-- <xacro:imu_macro
       name="tamagawa/imu"
       parent="sensor_kit_base_link"
       namespace=""
@@ -204,6 +205,18 @@
       roll="${calibration['sensor_kit_base_link']['tamagawa/imu_link']['roll']}"
       pitch="${calibration['sensor_kit_base_link']['tamagawa/imu_link']['pitch']}"
       yaw="${calibration['sensor_kit_base_link']['tamagawa/imu_link']['yaw']}"
+      fps="100"
+    /> -->
+    <xacro:imu_macro
+      name="imu_link"
+      parent="sensor_kit_base_link"
+      namespace=""
+      x="${calibration['sensor_kit_base_link']['imu_link']['x']}"
+      y="${calibration['sensor_kit_base_link']['imu_link']['y']}"
+      z="${calibration['sensor_kit_base_link']['imu_link']['z']}"
+      roll="${calibration['sensor_kit_base_link']['imu_link']['roll']}"
+      pitch="${calibration['sensor_kit_base_link']['imu_link']['pitch']}"
+      yaw="${calibration['sensor_kit_base_link']['imu_link']['yaw']}"
       fps="100"
     />
   </xacro:macro>
