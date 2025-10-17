@@ -55,13 +55,23 @@ sensor_kit_base_link:
     roll: 0.0
     pitch: 0.0
     yaw: 0.0
-  velodyne_top_base_link:
+    # 10.17_YSH_velodyne_top_changed
+  # velodyne_top_base_link:
+  #   x: 0.0
+  #   y: 0.0
+  #   z: 0.0
+  #   roll: 0.0
+  #   pitch: 0.0
+  #   yaw: 1.575
+  velodyne_top:
     x: 0.0
     y: 0.0
     z: 0.0
     roll: 0.0
     pitch: 0.0
-    yaw: 1.575
+    # 10.17_YSH_velodyne_yaw_zero - Test if LiDAR orientation affects NDT
+    # yaw: 1.575
+    yaw: 0.0
   velodyne_left_base_link:
     x: 0.0
     y: 0.56362
@@ -84,11 +94,29 @@ sensor_kit_base_link:
     pitch: 0.0
     yaw: 0.0
     # 10.15_YSH_imu_base_link_change
-  # tamagawa/imu_link:
+  # # tamagawa/imu_link:
+  # imu_link:
+  #   x: 0.0
+  #   y: 0.0
+  #   z: 0.0
+  #   roll: 3.14159265359
+  #   pitch: 0.0
+  #   yaw: 3.14159265359
+  # 10.17_YSH_imu_calibration_all_zero - CARLA provides correct orientation already
   imu_link:
     x: 0.0
     y: 0.0
     z: 0.0
-    roll: 3.14159265359
+    roll: 0.0
     pitch: 0.0
-    yaw: 3.14159265359
+    yaw: 0.0
+  # imu_link:
+  #   x: 0.0
+  #   y: 0.0
+  #   z: 0.0
+  #   roll: 0.0
+  #   pitch: 0.0
+  #   # 10.17_YSH_imu_base_link_changed
+  #   # yaw: 3.14159265359
+  #   # yaw: 1.5707963267948966
+  #   yaw: 0.0

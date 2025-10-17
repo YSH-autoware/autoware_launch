@@ -28,12 +28,12 @@
     <!-- <xacro:VLS-128 parent="sensor_kit_base_link" name="velodyne_top" topic="/points_raw" hz="10" samples="220" gpu="$(arg gpu)"> -->
     <xacro:VLS-128 parent="sensor_kit_base_link" name="velodyne_top" topic="/sensing/lidar/pointcloud_before_sync" hz="10" samples="220" gpu="$(arg gpu)">
       <origin
-        xyz="${calibration['sensor_kit_base_link']['velodyne_top_base_link']['x']}
-             ${calibration['sensor_kit_base_link']['velodyne_top_base_link']['y']}
-             ${calibration['sensor_kit_base_link']['velodyne_top_base_link']['z']}"
-        rpy="${calibration['sensor_kit_base_link']['velodyne_top_base_link']['roll']}
-             ${calibration['sensor_kit_base_link']['velodyne_top_base_link']['pitch']}
-             ${calibration['sensor_kit_base_link']['velodyne_top_base_link']['yaw']}"
+        xyz="${calibration['sensor_kit_base_link']['velodyne_top']['x']}
+             ${calibration['sensor_kit_base_link']['velodyne_top']['y']}
+             ${calibration['sensor_kit_base_link']['velodyne_top']['z']}"
+        rpy="${calibration['sensor_kit_base_link']['velodyne_top']['roll']}
+             ${calibration['sensor_kit_base_link']['velodyne_top']['pitch']}
+             ${calibration['sensor_kit_base_link']['velodyne_top']['yaw']}"
       />
     </xacro:VLS-128>
     <!-- <xacro:VLP-16 parent="sensor_kit_base_link" name="velodyne_left" topic="/points_raw" hz="10" samples="220" gpu="$(arg gpu)">
@@ -208,7 +208,7 @@
       fps="100"
     /> -->
     <xacro:imu_macro
-      name="imu_link"
+      name="imu"
       parent="sensor_kit_base_link"
       namespace=""
       x="${calibration['sensor_kit_base_link']['imu_link']['x']}"
