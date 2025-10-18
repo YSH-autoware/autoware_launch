@@ -13,7 +13,7 @@
     moderate_stop_service_acceleration: -1.5
     stop_check_duration: 1.0
     nominal:
-      vel_lim: 50.0  # 25.0 → 50.0 (CARLA: allow highway speeds)
+      vel_lim: 25.0
       reference_speed_points: [0.1, 0.3, 20.0, 30.0]
       steer_cmd_lim: [1.0, 1.0, 1.0, 0.8]
       steer_rate_lim_for_steer_cmd: [1.0, 1.0, 1.0, 0.8]
